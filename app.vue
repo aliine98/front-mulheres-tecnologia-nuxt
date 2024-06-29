@@ -2,9 +2,9 @@
 import './base.css';
 </script>
 <template>
-    <div>
-        <NuxtRouteAnnouncer />
+    <main>
         <Hero />
-    </div>
+        <WomenList />
+    </main>
 </template>
 
