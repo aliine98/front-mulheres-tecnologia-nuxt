@@ -8,7 +8,7 @@
 <style scoped>
 section {
     color: #fdfdfd;
-    background: #6e57f3;
+    background-color: var(--main-color);
     min-height: 100dvh;
     display: grid;
     place-items: center;

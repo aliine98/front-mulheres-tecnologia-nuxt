@@ -5,6 +5,7 @@ import './base.css';
     <main>
         <Hero />
         <WomenList />
+        <FormSection />
     </main>
 </template>
 

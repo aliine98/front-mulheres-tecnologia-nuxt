@@ -14,7 +14,7 @@ const props = defineProps<{ woman: Woman }>();
 <style scoped>
 li {
     color: #fdfdfd;
-    background: #6e57f3;
+    background-color: var(--main-color);
     border-radius: 30px;
     width: 250px;
     display: grid;
