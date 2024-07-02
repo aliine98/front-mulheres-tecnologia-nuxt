@@ -97,7 +97,7 @@ Será mostrado os links do servidor, clique ou copie e abra no navegador.
 
 ## 📝 Licença
 
-![License](https://img.shields.io/github/license/aliine98/front-mulheres-tecnologia-nuxt?logo=m&style=for-the-badge)
+![License](https://img.shields.io/github/license/aliine98/front-mulheres-tecnologia-nuxt?&style=for-the-badge)
 
 Feito com ❤️ por <a href="https://github.com/aliine98">Aline Bevilacqua</a>!
 
