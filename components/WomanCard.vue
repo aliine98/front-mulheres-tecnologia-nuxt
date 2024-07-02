@@ -1,5 +1,6 @@
 <template>
     <li class="woman-card">
+        <button class="delete-btn" @click="deleteWoman(props.woman._id)"><img src="../assets/delete.png" width="45" alt="Delete icon" /></button>
         <img :src="props.woman.image" :alt="'Imagem de perfil da ' + props.woman.name" class="woman-img" />
         <details>
             <summary>{{ props.woman.name }}</summary>
@@ -7,6 +8,7 @@
         </details>
         <button class="secondary-btn" @click="openDialog">Editar</button>
         <dialog ref="dialog" class="edit-dialog">
+            <button class="close-btn" @click="closeDialog"><img src="../assets/cross.svg" width="20" alt="close icon" /></button>
             <form @submit.prevent="updateWoman(name, image, desc, props.woman._id)">
                 <label>Nome: <input type="text" v-model="name" class="form-input" /></label>
                 <label>Url da imagem: <input type="text" v-model="image" class="form-input" /></label>
@@ -30,6 +32,10 @@ function openDialog() {
     dialog.value!.showModal();
 }
 
+function closeDialog() {
+    dialog.value!.close();
+}
+
 async function updateWoman(name: string | null, image: string | null, desc: string | null, id: string | undefined) {
     disabled.value = true;
     const body = {};
@@ -38,6 +44,11 @@ async function updateWoman(name: string | null, image: string | null, desc: stri
     if (desc) body.desc = desc;
 
     await $fetch(`https://backend-teste-vn7a.onrender.com/mulheres/${id}`, { method: 'PATCH', body });
+    reloadNuxtApp();
+}
+
+async function deleteWoman(id: string | undefined) {
+    await $fetch(`https://backend-teste-vn7a.onrender.com/mulheres/${id}`, { method: 'DELETE' });
     reloadNuxtApp();
 }
 </script>
@@ -51,6 +62,30 @@ async function updateWoman(name: string | null, image: string | null, desc: stri
     place-items: center;
     gap: 1rem;
     padding: 1.5rem;
+    position: relative;
+}
+
+.delete-btn,
+.close-btn {
+    position: absolute;
+    background: none;
+    border: transparent;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.delete-btn {
+    top: -16px;
+    right: -16px;
+}
+
+.close-btn {
+    top: 5px;
+    right: 5px;
+}
+
+.delete-btn:hover {
+    filter: brightness(80%);
 }
 
 .woman-img {
