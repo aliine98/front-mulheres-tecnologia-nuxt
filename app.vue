@@ -6,6 +6,7 @@ import './base.css';
         <Hero />
         <WomenList />
         <FormSection />
+        <Footer />
     </main>
 </template>
 
