@@ -2,8 +2,6 @@
 
 # <p align="center">Mulheres da tecnologia</p>
 
-<a href="aliine98.github.io"><p align="center">Deploy: aliine98.github.io</p></a>
-
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/aliine98/front-mulheres-tecnologia-nuxt?style=flat">
   <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/aliine98/front-mulheres-tecnologia-nuxt?color=magenta&style=flat">
